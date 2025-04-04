@@ -43,8 +43,7 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 ### 📱 Mobile View:
 ![Mobile Screenshot](assets/mobile.png)
 ### Live Link
-https://tmoh-squim.github.io/plp-hackathon-portfolio
-
+https://tmoh-squim.github.io/plp-hackathon-portfolio-project/
 ## 📬 Contact
 Feel free to reach out to me:
 - **Email:** timooh3214@gmail.com
