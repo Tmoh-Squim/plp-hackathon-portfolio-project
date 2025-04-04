@@ -1,0 +1,131 @@
+
+.progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 0%;
+    border-radius: 9999px;
+    background-color: blue; /* Initial background color */
+    z-index: 11;
+    transition: height 0.3s ease-out; /* Keep the smooth height transition */
+    box-shadow: -2px 0 10px rgba(0, 138, 255, 0.7); /* Initial glow/shadow */
+    animation: progressBarColorChange 2s linear infinite, progressBarGlow 2s linear infinite; /* Apply both animations */
+}
+
+#hero {
+    animation: rotateHero 15s linear infinite; /* Apply the animation */
+}
+
+.social a:first-child {
+    animation: stroke-color-change 3s infinite alternate; /* Add an animation */
+}
+
+.social a:nth-child(2) {
+    animation: stroke-color-change2 3s infinite alternate; /* Add an animation */
+}
+
+.social a:last-child {
+    animation: stroke-color-change3 3s infinite alternate; /* Add an animation */
+}
+.download-cv-btn{
+    animation: cvBtnColorChange 3s infinite alternate; /* Add an animation */
+}
+
+/* Keyframes */
+@keyframes stroke-color-change {
+    0% {
+        -webkit-text-stroke-color: #fff;
+    }
+    50% {
+        -webkit-text-stroke-color: #00ff00;
+    }
+    100% {
+        -webkit-text-stroke-color: orange;
+    }
+}
+
+@keyframes stroke-color-change2 {
+    0% {
+        -webkit-text-stroke-color: #00ff00;
+    }
+    50% {
+        -webkit-text-stroke-color: orange;
+    }
+    100% {
+        -webkit-text-stroke-color: #fff;
+    }
+}
+
+@keyframes stroke-color-change3 {
+    0% {
+        -webkit-text-stroke-color: orange;
+    }
+    50% {
+        -webkit-text-stroke-color: #fff;
+    }
+    100% {
+        -webkit-text-stroke-color: #00ff00;
+    }
+}
+
+@keyframes rotateHero {
+    from {
+        transform: translateY(50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(50%) rotate(360deg);
+    }
+}
+@keyframes progressBarColorChange {
+    0% {
+        background-color: rgb(0, 138, 255);
+    }
+    25% {
+        background-color: limegreen;
+    }
+    50% {
+        background-color: gold;
+    }
+    75% {
+        background-color: tomato;
+    }
+    100% {
+        background-color: rgb(0, 138, 255);
+    }
+}
+
+@keyframes progressBarGlow {
+    0% {
+        box-shadow: -2px 0 10px rgba(0, 138, 255, 0.7); /* Match initial background */
+    }
+    25% {
+        box-shadow: -2px 0 10px rgba(144, 238, 144, 0.7); /* Match limegreen */
+    }
+    50% {
+        box-shadow: -2px 0 10px rgba(255, 215, 0, 0.7);    /* Match gold */
+    }
+    75% {
+        box-shadow: -2px 0 10px rgba(255, 99, 71, 0.7);     /* Match tomato */
+    }
+    100% {
+        box-shadow: -2px 0 10px rgba(0, 138, 255, 0.7); /* Match initial background */
+    }
+}
+@keyframes cvBtnColorChange {
+    0% {
+        border-color: rgb(0, 138, 255);
+    }
+    25% {
+        border-color: limegreen;
+    }
+    50% {
+        border-color: gold;
+    }
+    75% {
+        border-color: tomato;
+    }
+    100% {
+        border-color: rgb(0, 138, 255);
+    }
+}
