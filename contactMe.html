@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Linking CSS Files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="keyframes.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web\css\fontawesome.min.css">
+
+    <title>Contact Me</title>
+</head>
+<body>
+    <!-- Scroll Progress Indicators -->
+    <div class="scrollPath"></div>
+    <div class="progressbar"></div>
+    
+    <!-- Navbar Section -->
+    <nav>
+      <h1>
+        <a href="index.html">TK</a>
+      </h1>
+      <div class="menu-button"><i class="fas fa-bars"></i></div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="menu">
+      <nav>
+        <h1>
+          <a href="index.html">TK</a>
+        </h1>
+        <div class="close-button"><i class="fas fa-times"></i></div>
+      </nav>
+      <div class="menu-container">
+        <a href="index.html">Home</a>
+        <a href="aboutMe.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contactMe.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-container">
+        <form onsubmit="sendEmail(); return false;">
+            <h1><span>Connect with me</span></h1>
+            
+            <!-- Input Fields -->
+            <label for="name">NAME*</label>
+            <input type="text" required />
+            
+            <label for="email">EMAIL*</label>
+            <input type="email" required />
+            
+            <label for="message">MESSAGE*</label>
+            <input type="text" required />
+            
+            <!-- Submit Button -->
+            <button type="submit">SEND</button>
+        </form>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="get">
+        <div class="getinTouch">
+          <h1>Get in touch</h1>
+          <p>timooh3214@gmail.com</p>
+        </div>
+    </div>
+      
+    <!-- Footer Section -->
+    <footer>
+        <h1>
+            <a href="index.html">TK</a>
+        </h1>
+      
+        <!-- Social Media Links -->
+        <div class="social">
+            <a href="https://github.com/Tmoh-Squim">GitHub</a>
+            <a href="https://www.linkedin.com/in/timothy-kibunja-8789342a2">LinkedIn</a>
+            <a href="https://wa.me/2540748143442?text=">WhatsApp</a>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top">&#8593;</button>
+    
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

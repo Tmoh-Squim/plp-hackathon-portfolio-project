@@ -1,0 +1,363 @@
+/**responsive design **/
+@media screen and (max-width: 480px) { /* sm: */
+    /* General Fixes */
+    * {
+       box-sizing: border-box;
+       max-width: 100%;
+       overflow-x: hidden;
+       margin: 0;
+       padding: 0;
+   }
+
+   body {
+       overflow-x: hidden;
+       width: 100%;
+       margin: 0;
+       padding: 0;
+   }
+   nav {
+       display: flex;
+       padding-left: 20px;
+       padding-right: 10px !important;
+       padding-top: 10px !important;
+       padding-bottom: 20px;
+       align-items: center;
+   }
+   .name {
+       font-size: 70px !important; /* text-5xl */
+       margin: 0;
+       text-align: center;
+   }
+   main{
+       margin: 0;
+       padding: 8px 15px;
+   }
+   .social{
+       flex-direction: column;
+       align-items: start;
+       margin: 40px 0;
+   }
+   .download-cv-btn{
+    width: 100%;
+   }
+   .tech{
+       height: auto;
+       font-size: 70px !important; /* text-5xl */
+   }
+   .techs{
+       display: grid;
+       grid-template-columns: repeat(1, 1fr); /* Creates 2 equal-width columns */
+       gap: 10%;
+       padding-top: 50px;
+       width: 100%;
+       grid-auto-rows: auto; /* Each row is full viewport height */
+       margin-bottom: 100px;
+       overflow-y: hidden;
+       height: auto; /* Make the grid container 100vh tall */
+   }
+   .projects {
+       display: block;
+       align-items: center;
+       width: 400vw; /* Adjust width based on the number of slides */
+       height: 100vh;
+       position: relative;
+       transition: transform 0.5s ease-out;
+   }
+   
+   .project-card {
+       width: 100%; /* Full screen width per card */
+       height: auto;
+       display: flex;
+       margin: 10px 0;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+   }
+   
+   .project-card img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       border-radius: 10px;
+   }
+   .tech-card {
+       opacity: 0;
+       height: fit-content; /* Makes each card fill its row */
+       transform: scale(0.8) translateY(-25%); /* Start smaller and higher */
+       transition: opacity 1.0s ease-out, transform 1.5s ease-out;
+       box-sizing: border-box; /* Includes padding & border in height calculation */
+   }
+   .about {
+    height: auto;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+   .heading h1 {
+       font-size: 70px;
+   }
+   #hero {
+       display: none;
+   }
+   form h1 {
+       color: #fff;
+       display: flex;
+       flex-direction: column;
+       font-size: 50px;
+       margin: 15px 0;
+   }
+   
+   form h1 span {
+       color: transparent; /* Make the text itself transparent */
+       opacity: 1; /* Ensure the element is visible */
+       -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+   }
+   
+   form label {
+       color: white;
+       font-size: 20px;
+   }
+   
+   form button {
+       width: 50%;
+   }
+   
+   .getinTouch {
+       margin: 0;
+       border-bottom-color: gray;
+       border-bottom-width: 2px;
+       border-bottom-style: solid; /* Or dashed, dotted, etc. */
+   }
+   
+   .getinTouch h1 {
+       color: transparent; /* Make the text itself transparent */
+       opacity: 1; /* Ensure the element is visible */
+       -webkit-text-stroke: 1px #fff;
+       font-size: 70px;
+       margin: 0;
+   }
+   
+   .getinTouch p {
+       color: #fff;
+       margin: 0;
+       font-size: 30px;
+   }
+   footer {
+       display: block;
+       gap: 20px;
+       padding-left: 10px;
+       padding-right: 10px;
+   }
+   
+   footer h1 {
+       color: #fff;
+       font-family: cursive;
+       font-style: italic;
+       font-size: 30px;
+       cursor: pointer;
+   }
+   .about-container{
+   padding: 3px  20px !important;
+   }
+   .profile{
+   width: 100%;
+   height: 50% !important;
+   margin: 3% 0;
+   border-radius: 5px;
+  }
+  .contact-container{
+   min-height: 82vh !important;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px  15px !important;
+}
+}
+
+@media screen and (max-width: 768px) { /* Tablet: */
+       /* General Fixes */
+       * {
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+ 
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    nav {
+        display: flex;
+        padding: 20px !important;
+        align-items: center;
+    }
+    .name {
+        font-size: 70px !important; /* text-5xl */
+        margin: 0;
+        text-align: center;
+    }
+    #hero {
+        display: none;
+
+    }
+    main{
+        margin: 0;
+        padding: 8px 15px;
+    }
+    .social{
+        flex-direction: column;
+        align-items: start;
+        margin: 40px 0;
+    }
+    .tech{
+        height: auto;
+        font-size: 70px !important; /* text-5xl */
+    }
+    .techs{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Creates 2 equal-width columns */
+        gap: 10%;
+        padding-top: 50px;
+        width: 100%;
+        grid-auto-rows: auto; /* Each row is full viewport height */
+        margin-bottom: 100px;
+        height: auto; /* Make the grid container 100vh tall */
+    }
+    .projects {
+        display: block;
+        align-items: center;
+        height: auto;
+        position: relative;
+        transition: transform 0.5s ease-out;
+    }
+    
+    .project-card {
+        width: 100%; /* Full screen width per card */
+        height: auto;
+        display: flex;
+        margin: 10px 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .project-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .tech-card {
+        opacity: 0;
+        height: fit-content; /* Makes each card fill its row */
+        transform: scale(0.8) translateY(-25%); /* Start smaller and higher */
+        transition: opacity 1.0s ease-out, transform 1.5s ease-out;
+        box-sizing: border-box; /* Includes padding & border in height calculation */
+    }
+    .about{
+        height: auto;
+    }
+    .heading h1 {
+        font-size: 70px;
+    }
+    #hero {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(50%);
+        width: 100%;
+        z-index: -100;
+        background-color: transparent;
+        animation: rotateHero 15s linear infinite; /* Apply the animation */
+    }
+    form h1 {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        font-size: 50px;
+        margin: 15px 0;
+    }
+    
+    form h1 span {
+        color: transparent; /* Make the text itself transparent */
+        opacity: 1; /* Ensure the element is visible */
+        -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+    }
+    
+    form label {
+        color: white;
+        font-size: 20px;
+    }
+    
+    form button {
+        width: 50%;
+    }
+    
+    .getinTouch {
+        margin: 0;
+        border-bottom-color: gray;
+        border-bottom-width: 2px;
+        border-bottom-style: solid; /* Or dashed, dotted, etc. */
+    }
+    
+    .getinTouch h1 {
+        color: transparent; /* Make the text itself transparent */
+        opacity: 1; /* Ensure the element is visible */
+        -webkit-text-stroke: 1px #fff;
+        font-size: 70px;
+        margin: 0;
+    }
+    
+    .getinTouch p {
+        color: #fff;
+        margin: 0;
+        font-size: 30px;
+    }
+    footer {
+        display: block;
+        gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    } 
+    
+    footer h1 {
+        color: #fff;
+        font-family: cursive;
+        font-style: italic;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .about-container{
+    padding: 3px  20px !important;
+    }
+    .profile{
+    width: 100%;
+    height: 50% !important;
+    margin: 3% 0;
+    border-radius: 5px;
+   }
+   .contact-container{
+    min-height: 82vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px  15px !important;
+ }
+}
+ /* Responsive Flexbox Layout for Large Screens */
+ @media (min-width: 768px) {
+    .resume-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #education, #experience {
+        flex: 1;
+        margin: 0 10px;
+    }
+}

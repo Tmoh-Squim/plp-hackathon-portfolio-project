@@ -1,0 +1,570 @@
+/* Global Styles */
+:root {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f0f0f;
+    min-height: 100vh;
+    min-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+/**navbar styles*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    align-items: center;
+    color: white;
+  }
+nav h1 {
+    color: #fff;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+nav h1:hover {
+    color: darkblue;
+    transition: all;
+    transition: 0.3s;
+}
+.menu nav{
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+.menu-button, .close-button {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f0f0f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+.menu.show {
+    transform: translateX(0);
+}
+.menu nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    align-items: center;
+    color: white;
+}
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 3%;
+    align-items: end;
+}
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 75px;
+    margin: 10px 0;
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+  }
+/*main section styles*/
+main {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
+.about {
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+#hero {
+    position: absolute;
+    right: 10%;
+    top: -50%;
+    transform: translateY(50%);
+    width: 400px;
+    z-index: -50;
+    background-color: transparent;
+}
+.name {
+    color: #fff;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    font-size: 100px;
+}
+
+.name span {
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+}
+
+.tech {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 100px;
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+}
+
+.tech span {
+    color: #fff;
+    display: flex;
+}
+
+/*project section styles*/
+.work {
+    padding-top: 10px;
+}
+
+.heading {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: gray;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.heading h1 {
+    color: #fff;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    font-size: 100px;
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+}
+
+.scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: black;
+    opacity: 20;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social a {
+    font-size: 30px;
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff;
+}
+
+
+.techs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 uniform columns */
+    gap: 5%;
+    margin-bottom: 100px;
+    width: 100%;
+    grid-auto-rows: 80vh; /* Each row is full viewport height */
+    height: auto;
+    padding-bottom: 50px;
+    align-items: center; /* Ensures elements expand properly */
+}
+
+.tech-card {
+    
+    opacity: 0;
+    transform: scale(0.8) translateY(-25%); /* Start smaller and higher */
+    transition: opacity 1.0s ease-out, transform 1.5s ease-out;
+    box-sizing: border-box; /* Includes padding & border in height calculation */
+}
+.tech-card.in-view {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* Zoom-in and move into place */
+}
+
+.tech-card.out-of-view {
+    opacity: 0;
+    transform: scale(0.8) translateY(25%); /* Shrinks and moves down when leaving */
+    transition: opacity 0.8s ease-in, transform 1s ease-in;
+}
+.tech-container{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center; /* Centers content */
+    border-top: 2px solid gray;
+    padding: 10px 20px;
+}
+.download-cv-btn {
+    display: inline-block; /* Allows for padding and width/height control */
+    color: white;
+    border: solid 2px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-decoration: none; /* Remove default link underline */
+    border-radius: 20px; /* Add rounded corners */
+    font-weight: bold; /* Make the text stand out */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+}
+.download-cv-btn:hover{
+    background: rgb(8, 117, 8);
+}
+.download-cv-btn a{
+    color: white;
+}
+.tech-card img {
+    max-width: 100px;
+    height: auto;
+    color: gray;
+}
+
+.tech-card p {
+    color: gray;
+    font-size: 40px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.tech-card h1 {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.tech-card span {
+    color: gray;
+    font-size: 25px;
+}
+
+
+
+form h1 {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 100px;
+}
+
+form h1 span {
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff; /* Apply the black outline */
+}
+
+form label {
+    color: white;
+    font-size: 22px;
+}
+
+form input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border-bottom-color: gray;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-top: none; /* Remove top border */
+    border-left: none; /* Remove left border */
+    border-right: none; /* Remove right border */
+    background-color: transparent;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+form button {
+    padding: 20px 15px;
+    border: none;
+    width: 15%;
+    border-radius: 8px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 800;
+    background-color: gray; /* Or your initial background */
+    background-image: linear-gradient(to right, rgb(10, 127, 148) 0%, aqua 100%, transparent 100%);
+    background-size: 0% 100%; /* Start with zero width */
+    background-repeat: no-repeat; /* Prevent the gradient from repeating */
+    background-position: left center; /* Start from the left */
+    transition: background-size 0.5s ease-in-out;
+}
+
+form button:hover {
+    background-size: 100% 100%;
+}
+.btn {
+    padding: 20px 15px; /* Shorthand for top, right, bottom, left */
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 800;
+    background-color: gray; /* Or your initial background */
+    background-image: linear-gradient(to right, rgb(10, 127, 148) 0%, aqua 100%, transparent 100%);
+    background-size: 0% 100%; /* Start with zero width */
+    background-repeat: no-repeat; /* Prevent the gradient from repeating */
+    background-position: left center; /* Start from the left */
+    transition: background-size 0.5s ease-in-out;
+}
+
+.btn:hover {
+    background-size: 100% 100%;
+}
+
+.getinTouch {
+    padding-top: 50px;
+    border-bottom-color: gray;
+    padding-bottom: 20px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid; /* Or dashed, dotted, etc. */
+}
+
+.getinTouch h1 {
+    color: transparent; /* Make the text itself transparent */
+    opacity: 1; /* Ensure the element is visible */
+    -webkit-text-stroke: 1px #fff;
+    font-size: 100px;
+    margin: 0;
+}
+
+.getinTouch p {
+    color: #fff;
+    margin: 0;
+    font-size: 55px;
+}
+
+footer {
+    display: flex;
+    gap: 30px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    align-items: center;
+}
+
+footer h1 {
+    color: #fff;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Style for the Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling until all cards are shown */
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    gap: 20px;
+    width: 100%;
+    min-height: 100vh;
+    transition: transform 0.5s ease-out;
+}
+
+.project-card {
+    width: 48%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.project-card p{
+    color: white;
+}
+.project-card img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    object-fit: cover;
+    transition: all 0.5s;
+    border-radius: 20px;
+}
+.project-card video {
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+    border-radius: 20px;
+}
+.project-card-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.project-card-links a{
+    color: gray;
+    font-size: 20px;
+}
+.project-card-links a:hover{
+    color: #0056b3;
+}
+.project-card h1 {
+    position: absolute;
+    color: blue;
+    font-size: 2rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0; /* Initially hide the h1 */
+    transition: opacity 0.3s ease-in-out; /* Add a smooth transition */
+}
+
+.project-card:hover h1 {
+    opacity: 1; /* Show the h1 on hover */
+}
+.projects img:hover{
+    filter: grayscale(0);
+    transition: all 0.5s;
+    opacity: 1;
+}
+.name {
+    transform: translateY(100px);
+    opacity: 0; /* Ensure text starts hidden */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+  .animate {
+    transform: translateY(0);
+    opacity: 1;
+  }
+/**about */
+.about-container h1{
+    font-size: 50px;
+    color: white;
+    margin: 0;
+}
+.info{
+    font-size: 23px;
+    color: white;
+    margin: 0;
+    text-align: justify;
+}
+.about-container{
+    padding: 3% 15%;
+}
+.profile{
+    width: 100%;
+    height: 500px;
+    margin: 3% 0;
+    border-radius: 30px;
+}
+.about-me{
+    color: gray;
+    text-align: justify;
+    font-size: 23px;
+}
+.about-me p{
+    text-align: justify;
+}
+.about-me button {
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: transparent;
+    color: #007BFF;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.get{
+    margin: 0 3% !important;
+}
+.contact-container{
+    min-height: 100vh;
+    padding: 3%  15%;
+}
+
+
+
+/* Interests Section Styles */
+#interests {
+    color: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+}
+#interests h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+#interests ul {
+    list-style: none;
+    padding: 0;
+}
+#interests li {
+    font-size: 18px;
+    padding: 8px 0;
+}
+#interests li:last-child {
+    border-bottom: none;
+}
