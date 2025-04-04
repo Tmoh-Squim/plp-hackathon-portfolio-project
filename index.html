@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="keyframes.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/css/all.min.css">
+    <title>Timothy Kibunja - Full Stack Mern Developer</title>
+  </head>
+  <body>
+    <!-- Scroll indicators -->
+    <div class="scrollPath"></div>
+    <div class="progressbar"></div>
+    <!---navbar section-->
+    <nav>
+      <h1>
+        <a href="#">TK</a>
+      </h1>
+      <div class="menu-button"><i class="fas fa-bars"></i></div>
+    </nav>
+    
+    <div class="menu">
+      <nav>
+        <h1>
+          <a href="index.html">TK</a>
+        </h1>
+        <div class="close-button"><i class="fas fa-times"></i></div>
+      </nav>
+      <div class="menu-container">
+      <a href="index.html">Home</a>
+      <a href="aboutMe.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="contactMe.html">Contact</a>
+      </div>
+    </div>
+    <main>
+      <div class="about">
+        <!-- Hero Section -->
+        <div>
+          <h1 class="name">Timothy <span>Kibunja</span></h1>
+
+          <h1 class="name">
+            Full Stack
+            <span> Mern Developer </span>
+          </h1>
+          <img src="./assets/hero.png" id="hero" alt="hero-image" />
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="social">
+        <a href="https://github.com/Tmoh-Squim">github</a>
+        <a href="https://www.linkedin.com/in/timothy-kibunja-8789342a2">linkedin</a>
+        <a href="https://wa.me/2540748143442?text=">whatsapp</a>
+      </div>
+      <br />
+
+      <!-- Download CV Button -->
+      <div class="download-cv-btn">
+        <a href="assets/Squim-cv.pdf" download="Timothy_Kibunja_CV.pdf">Download Cv</a>
+    </div>
+    
+
+      <!-- Projects Section -->
+      <div class="work">
+        <div class="heading">
+          <h1 class="">Projects</h1>
+        </div>
+       <div class="scroll-wrapper">
+         <div class="projects">
+
+        <!-- Project Cards -->
+        <div class="project-card">
+          <a href="https://squimstech.vercel.app">
+            <video src="assets/output.mp4" autoplay loop muted playsinline></video>
+          </a>
+          <h1>Multivendor Ecommerce website</h1>
+          <p>A powerful marketplace platform where multiple vendors can list, sell, and manage their products seamlessly.</p>
+          <div class="project-card-links">
+            <a href="https://squimstech.vercel.app">Visit</a>
+          </div>
+        </div>
+         <div class="project-card">
+          <a href="https://weather-app-sooty-two-92.vercel.app/">
+            <video src="assets/output2.mp4" autoplay loop muted playsinline></video>
+          </a>
+          <h1>Real time Weather App</h1>
+          <p>Get live weather updates, forecasts, and temperature trends for any location using a modern weather API.</p>
+          <div class="project-card-links">
+            <a href="https://squimstech.vercel.app">Visit</a>
+            <a href="https://github.com/Tmoh-Squim/weather_app.git">Source code</a>
+          </div>
+         </div>
+         <div class="project-card">
+          <a href="https://squimhotel.vercel.app">
+            <video src="assets/output3.mp4" autoplay loop muted playsinline></video>
+          </a>
+          <h1>Next js Hotel Booking Website</h1>
+          <p>Book hotel rooms in real-time with a seamless UI, secure payments, and an interactive search system.</p>
+          <div class="project-card-links">
+            <a href="https://squimhotel.vercel.app">Visit</a>
+            <a href="https://github.com/Tmoh-Squim/hotel-management-system.git">Source code</a>
+          </div>
+         </div>
+         <div class="project-card">
+          <a href="https://kenchick.vercel.app">
+            <img src="./assets/kenchick1.png" alt="">
+          </a>
+          <h1>Food Ordering Website</h1>
+          <p>Order delicious meals from top restaurants with a user-friendly interface and fast delivery service.</p>
+          <div class="project-card-links">
+            <a href="https://kenchick.vercel.app">Visit</a>
+            <a href="https://github.com/Tmoh-Squim/Kenchick-project.git">Source code</a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+
+        <!-- Technology Stack Section -->
+        <h1 class="tech">
+          Technology
+          <span> Stack </span>
+        </h1>
+
+        <div class="techs">
+          <div class="tech-card">
+            <div class="tech-container">
+              <img
+              src="data:image/png;base64,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"
+              alt="Stack"
+            />
+            <div>
+              <p>/001</p>
+              <h1>HTML</h1>
+              <span>
+                Knowledge of hypertext markup allows you to create high-quality
+                markup of the site
+              </span>
+            </div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-container">
+              <img
+              src="data:image/png;base64,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"
+              alt="stack"
+            />
+            <div>
+              <p>/002</p>
+              <h1>CSS/TAILWIND</h1>
+              <span>
+                Excellent knowledge of CSS and Tailwind css allows you to create incredibly
+                beautiful sites
+              </span>
+            </div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-container">
+              <img
+              src="data:image/png;base64,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"
+              alt="stack"
+            />
+            <div>
+              <p>/003</p>
+              <h1>Javascript</h1>
+              <span>
+                Javascript allows to add functionality in any website
+              </span>
+            </div>
+            </div>
+          </div>
+          <div class="tech-card">
+          <div class="tech-container">
+            <img
+            src="data:image/png;base64,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"
+            alt="stack"
+          />
+          <div>
+            <p>/004</p>
+            <h1>React JS</h1>
+            <span>
+              React JS is a Javascript library, helps you to build interactive
+              UI
+            </span>
+          </div>
+          </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-container">
+              <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKwAAACrCAYAAAD7NHdgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAkRSURBVHja7N17rNdlHcDx94EDKl5IyLwr0kyzOUvLNW+dowcEjXH1wowYRMaMGJqSt7xlXkkZmTEjGBIBgrcpgnIE5i2HYrdVVsvK7K7lFbz/+uP5/Nazs7W22urzO7zf//B7GH89z2u/ffl+v7/naWs0Gpi1Su3AYGAlMBsYAtzitFiyXg6btAfWTqAbWATs6vxYsvoBRwCb2xqNxhHAuoC6BRgHbHKOLElTgTnxua0d2Ax0BdpBwApgBPC4c2UJ2lIP+sSfTwXaF4CBwFrgKOfKstWn+vx9YFiFdo1oLTPYJtou4Hlgl0B7tNNkWcEC/CDQ/rVCe4xTZVnBAvywQrtzoD3W6bKsYAF+BJwQaHcC7hOtZQYL8GPKQ4W/BNo1wHFOm2UFC/CTCu2OgbbDqbOsYAF+Gmj/DAwAVovWMoOt0f6pQnu8U2hZwQL8LND+MdDeE3cTzFKCBXi6B9q7KU/IzFKCBfh5oP1DoL0LGO50WlawNdrfV2hPdEotK1iAXwTa54AdAu0Ip9WyggX4ZdwteA7YXrSWHWwTbQfwO2C7QDvS6bWsYAF+FWifrdCe7BRbVrAAz8Q17bNAf+AO4JNOs2UF20TbAfw20N4OjHKqLStYgF8H2t8E2lXAaKfbsoIlsNZobwPGOuWWFSxxWdAR37j9geWitcxga7TPVGjHO/WWFSxx16CDcuurP7AMmOD0W1awUB4qNNH2C7SnuASWFSyUx7cdlCdj7cB3RWuZwTbRdlJenGmPb9rTXArLChbKK4lNtH2BpcBEl8OygoXy8ncn5b3avsAS0VpmsDXapyu0Z7gslhUslN+GdVJ+4NgXWAxMcmksK1goPx0/vkK7CPi0y2NZwTbRdlL2P+gLLAQmu0SWFSyUnWU6Kdsj9QW+DUxxmSwrWCh7eNVoF1AOZjBLCRbKFp+dlN0T+wDfEq1lBttEewJlc+U+8U07zSUTLMnRdlG2sW+jnNJ4pssm2Mw9T9m7q4l2PvA5l06w2dF2UU65aQO+CUx3+QSbuRcC7VOB9mbgLJdQsJn7Ww+0NwEzXEbBZu7vgXZzoJ0nWsG2CtonK7QzXU7BZu7FQPtEoJ0LzHJJBZu5lyi3vDYF2htFK9hWQDsceDzGNwLnuLSCzY52BPBYjL8GnOvyCjY72pMqtNcD57nEgs2OdiTwaIyvA2a7zILN3MuB9pEYXwuc71ILNnOvBNqHY3w1cKHLLdjMvRrXtE20XwUucskFmx3tSOChGF8JXOyyCzZzrwXajTH+CnCJSy/YzG2hHMHURHs5cJnLL9hWQLs+xpcGXBNsarSjgO4YXxKXCCbY1GhHA+tifHHcQTDBpkY7BnggxheKVrCtgvb+Cu3VkhBs5rYG2rUxPp/yKNcEm7bXKYfdNdHOprw0Y4JNjXYMsCbG51FeTzTBpu2NQLs6xudSXgQ3wabtTWAccG+Mz6H85KbNqRFsZrTjgXtiPAu4QbSCzY52AnB3hXauaAWbHe2pwJ0xnknZsEO0gk2N9vQK7Qzg66IVbCugvT3Gn6dsQidawaZGOxFYFeOzKNt9ilawaXurB9rplN3ARSvYtL0daFfG+EzRCrZV0K6o0N4iWsFm7h3KqePLYjyNciyT8ynY1GgnVWinUg7Ac04Fmx7t0grtAsqRoybYtGgnA0tiPIVyqLNoBZsa7RTg1hhPBhaJVrDZ0U4FFsd4kmgF2wpoPxNQm2gXi1aw2dFOAxbG+Iy4vhWtYNP2LvDZCu1E4DuiFWx2tM0HClDe+FoqWsFmrsE/H90CnEZ50NDu1Ag2M9rpFdpTRCvYVkE7P8YTAm0/p0awmdE2X/yu0fZ3agSbGe0Myk9soPycfLloBZsd7cwK7VjKu7WiFWx6tPNiPAa4TbSCzY52FmWDDii7gq8SrWCzoz27QjsKuEO0gs3e2ZT9u6CcdCNawabvi8CcCu1dwHZOi2AzV2+kPDLQbu+0CDZz9Zb1Iyj7eolWsKn7EnBNhfYuYAenRbCZuwC4Kj6fGGgHCNYyd1GFdrhoBdsqaK+Mz8Mou4IPEKxl7svAFfG5i3L+wgDBWuYuBS6Lz8dTjmcaIFjL3OUBF6ADuG9bQyvY1uuKuEQA+ATl9MYdBWuZuzL+MwZwXKDdSbCWuasqtMduK2gF2/poL4jPxwTanQVrmbuG8ii3RruLYC1z11FemgE4OtAOFKxl7nrK64kAR1FueQ0UrGVuDuVF8Cbatb0NrWB7XzdQfnID8HHggd6EVrC9s7mBtgEcCazrLWgF27vRzgq0HwO6gfcI1jI3j7JhRwP4aKDdVbCWuZuALwTaIwLtIMFa5r5B2YSuARwe17SDBGuZu5my3WcTbTcwWLCWufmUjZUbwEcC7XsFa5m7pUL74VZDK9htF+2ZgfawQLubYC1zCyjHMr0baB9sBbSC3bZbSDkA713gUGBDdrSCtYXxTfsO8KFA+z7BWuYWUQ51rtHuLljL3GJgaqA9JNDuIVjL3K3AlED7QWB9NrSCtZ4tASZXaDcAewrWMrcUmBRoDw60ewnWMrcM+FSgPSjQ7i1Yy9xy4IxA+4G4pt1bsJa5FcBE4O1AuwHYR7CWuZUV2gOBjcC+grXMrQq0bwHvj2/afQVrrYD2zUC7EdhPsJa524HTA+3QQLu/YC1zd1ZoD/hfohWs/TdoTw20QwLtEMFa5u4GJvRAe4BgLXP3AOMD7f6BdqhgLXP3AuMC7X6UW15DBWuZWw2MAd4ItBspt74Ea2lbE2hfpzxU2Eh5MiZYS9taYGyg3ScuDw4UrGVHOwbYSnm7awPlxRnBWtruD7RbKrQHCdYy90CFdq9Ae7BgLXPrgNGBdk/KS+AHC9Yy1w2MqtBuoPzAUbCWtvXAyYF2j0B7iGAtcxsrtLv/J2gFa/8PtCOB1yh7eG2gbI8kWEvbQ4H21QrtoYK1zD1cod2Nsj/tYYK1zD0SaF8JtOv+HVrBWha0LwfabsrZC4K1tD0aaF+iHBDSTTnlRrCWtseAkwLt4H+FVrCWDe2IQDso0B5e/4O2RqPhNFm2jqS8ODOwx9+3+Q1rGdsEDItv2mbf85LAMvcE0AW8GOOtgrXsPRloH6Tsf8A/BgDdQvQoS/elZAAAAABJRU5ErkJggg=="
+              alt="stack"
+            />
+            <div>
+              <p>/005</p>
+              <h1>Next JS</h1>
+              <span>
+                React framework for server-side rendering and simplified
+                routing and much more
+              </span>
+            </div>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-container">
+             <img
+             src="data:image/png;base64,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"
+             alt="stack"
+           />
+           <div>
+             <p>/006</p>
+             <h1>Node JS</h1>
+             <span>
+              Node Js enables developers to build fast, scalable, and efficient server-side applications.
+            </span>
+           </div>
+            </div>
+           </div>
+      </div>
+
+       <!-- Interests Section -->
+      <section id="interests">
+        <h2>Interests</h2>
+        <ul>
+            <li>Ethical hacking & cybersecurity</li>
+            <li>AI-driven trading strategies</li>
+            <li>Building high-performance mobile apps</li>
+            <li>Developing decentralized applications (dApps)</li>
+            <li>Music production & Afrobeat remixing</li>
+            <li>Ethical AI development & automation</li>
+            <li>Open-source contributions & security research</li>
+        </ul>
+    </section>
+
+       <!-- Contact Form -->
+      <form onsubmit="sendEmail(); return false;">
+        <h1>Contact <span>With Me Now</span></h1>
+        <label for="name">NAME*</label>
+        <input type="text" required />
+        <label for="email">EMAIL*</label>
+        <input type="email" required />
+        <label for="message">MESSAGE*</label>
+        <input type="text" required />
+        <button type="submit">SEND</button>
+      </form>
+
+      <!-- Get in Touch Section -->
+      <div class="getinTouch">
+        <h1>Get in touch</h1>
+        <p>timooh3214@gmail.com</p>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <h1>
+        <a href="index.html">Tk</a>
+      </h1>
+
+      <div class="social">
+        <a href="https://github.com/Tmoh-Squim">github</a>
+        <a href="https://www.linkedin.com/in/timothy-kibunja-8789342a2">linkedin</a>
+        <a href="https://wa.me/2540748143442?text=">whatsapp</a>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+</html>
